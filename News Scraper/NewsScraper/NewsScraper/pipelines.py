@@ -11,10 +11,7 @@ import pymongo
 class NewsscraperPipeline(object):
     def __init__(self):
         # creating connection with the database
-        self.conn = pymongo.MongoClient(
-            'localhost',
-            27017
-        )
+        self.conn = pymongo.MongoClient("mongodb+srv://fahimshahriar:<password>@newsscraper-xwzpv.mongodb.net")
         db = self.conn['BBCnews']
         self.collection = db['news_tb']
 
